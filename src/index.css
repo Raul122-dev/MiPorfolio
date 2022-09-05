@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-stroke-color: #093A3E;
+  --bg-color: #001011;
+  --second-color: #3AAFB9;
+  --transparent-stroke-color: #3aaeb9a1;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./fonts/Poppins-Regular.otf")
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./fonts/Poppins-Bold.otf")
+}
+
+/* change style for scrollbar */
+ ::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.39);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+} 
