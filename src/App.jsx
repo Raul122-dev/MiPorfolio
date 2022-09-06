@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import ButtonUp from "./components/ButtomUp";
 import Indicators from "./components/Indicators";
 import Initial from "./components/Initial";
@@ -12,6 +12,10 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Hobbies from "./components/Hobbies";
+
+import Particles from 'react-particles'
+import { loadFull } from 'tsparticles'
+import { configParticles } from './libs/particlesConfig'
 
 function App() {
   const [index, setIndex] = useState(1);
@@ -76,38 +80,43 @@ function App() {
     };
   }, []);
 
-  const openInfoHandler = () => {
-    setOpenInfo(true)
-    //disable scroll
-    //document.body.style.overflow = 'hidden'
-  }
+  const openInfoHandler = () =>  setOpenInfo(true)
+  const closeInfoHandler = () => setOpenInfo(false)
+  
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
 
-  const closeInfoHandler = () => {
-    setOpenInfo(false)
-    //enable scroll
-    //document.body.style.overflow = 'auto'
-  }
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
 
   return (
     <div className='w-full h-auto sm:pl-40 font-serif overflow-hidden bg-[#001011] bg-cover '  >
 
+      <Particles 
+        id="tsparticles"
+        init={particlesInit}
+        options={configParticles}
+        loaded={particlesLoaded}
+      />
+
       {
         !openInfo && (
           <>
-
             <AnimatePresence mode="wait" key={index}>
               {index === 1 && <Initial key="initial" setIndex={setIndex} setOpenInfo={openInfoHandler} />}
               {index === 2 && <ErrorBoundary><Projects key="second" setIndex={setIndex} /></ErrorBoundary> }
               {index === 3 && <Contact />}
             </AnimatePresence>
-
             <Indicators index={index} setIndex={setIndex} />
-          
           </>
         )
       }
-
-      
 
       { openInfo && (
         <div className='fixed flex z-10 bg-[#001011] w-full h-screen top-0 left-0 overflow-y-scroll overflow-x-hidden md:overflow-hidden'>
