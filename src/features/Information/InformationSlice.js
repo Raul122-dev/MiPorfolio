@@ -215,7 +215,40 @@ const stateEnglish = {
         button: 'Send mail',
         span: 'Now what?'
     },
-    projects: []
+    projects: [],
+    hobbies: [
+        {
+            name: 'Video Games',
+            description: 'I like to play video games, because it allows me to relax and have fun.',
+            image: 'https://www.rockpapershotgun.com/images/2020/10/2020-10-27-15-10-10-1024x576.jpg'
+        },
+        {
+            name: 'Music',
+            description: 'I like to listen to music, because it allows me to relax and have fun.',
+            image: 'https://www.rockpapershotgun.com/images/2020/10/2020-10-27-15-10-10-1024x576.jpg'
+        },
+        {
+            name: 'Sports',
+            description: 'I like to do sports, because it allows me to relax and have fun.',
+            image: 'https://occidente.co/wp-content/uploads/2018/06/trotar-deporte-hombre-trotando-corriendo.jpg'
+        },
+        {
+            name: 'Read',
+            description: 'I like to read, because it allows me to relax and have fun.',
+            image: 'https://aptus.com.ar/wp-content/uploads/2020/02/Edu-7.jpg'
+        },
+        {
+            name: 'Watch series',
+            description: 'I like to watch series, because it allows me to relax and have fun.',
+            image: 'https://cdn.vox-cdn.com/thumbor/6tk53aPhe6H8iodxUG-2tWdkjws=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18327841/acastro_190719_3527_plex_piracy_0002.jpg'
+        },
+        {
+            name: '3D Modeling',
+            description: 'I like to model in 3D, because it allows me to relax and have fun.',
+            image: 'https://i.pinimg.com/originals/48/c6/d6/48c6d69164db2f0620e8754e4aa51acb.jpg'
+        },
+    ],
+            
 }
 
 export const informationSlice = createSlice({

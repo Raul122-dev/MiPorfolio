@@ -165,7 +165,7 @@ function App() {
                     <span className="p-4 w-10 h-10 font-poppinsBold self-start text-red-400 cursor-pointer"
                       onClick={closeInfoHandler}>X</span>
 
-                    <img src='https://images.unsplash.com/photo-1611068813580-b07ef920964b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3VpdGFyJTIwd2FsbHBhcGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80' alt='profile' className='w-40 h-40 rounded-full' />
+                    <img src='https://cdn.discordapp.com/attachments/701464055235215471/914324772677095434/Polish_20211127_202002501.png' alt='profile' className='w-40 h-40 rounded-full' />
                     <h3 className="font-poppinsBold text-lg">{information.nameComplete}</h3>
                     <div className="w-full px-5">
                       <h4 className="font-poppinsBold text-xl">Educación</h4>
