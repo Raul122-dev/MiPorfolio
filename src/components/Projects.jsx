@@ -32,7 +32,7 @@ const Projects = ({ setIndex }) => {
       transition={{ type: "spring" }}
     >
       <div className="max-w-7xl m-auto z-[2] text-white flex justify-between items-center">
-        <div className="w-full flex flex-col gap-4 relative mb-28 mx-6 md:mx-0">
+        <div className="w-full flex flex-col gap-4 relative mb-28 px-6 md:mx-0">
 
           <div className="w-full flex mb-6 mt-8 md:px-[60px] md:mt-16">
             <svg className={`stroke-white group-hover:stroke-[#093A3E] sm:group-hover:-translate-x-1 transition-all duration-200 ease-in`} xmlns="http://www.w3.org/2000/svg" width="40" height="40" focusable="false" viewBox="0 0 12 12">
@@ -45,15 +45,13 @@ const Projects = ({ setIndex }) => {
           </div>
           
           <div className="w-full flex gap-12 md:gap-8 flex-col md:px-[80px]">
-            <CardProject index={1}/>
-          
-            <CardProject index={2}/>
 
-            <CardProject index={3}/>
+            {
+              information.projects.map((project, index) => (
+                <CardProject key={index} index={index} project={project} />
+              ))
+            }
 
-            <CardProject index={4}/>
-
-            <CardProject index={5}/>
           </div>
           
           

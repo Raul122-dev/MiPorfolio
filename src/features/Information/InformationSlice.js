@@ -15,7 +15,40 @@ const initialState = {
         button: 'Enviar un Correo',
         span: '¿Ahora qué?'
     },
-    projects: []
+    projects: [
+        {
+            title: 'Comer al toque',
+            description: 'Comer al toque es una aplicacion web que permite a los usuarios encontrar restaurantes cercanos a su ubicacion, ademas de poder ver la carta de los restaurantes y realizar pedidos.',
+            image: 'https://media.discordapp.net/attachments/806157754896875580/979925907705823252/unknown.png?width=917&height=516',
+            url: 'https://staging.comeraltoque.com/',
+            technologies: ['React', 'Redux', 'Socket.io', 'Google API', 'Django', 'Rest Framework',],
+            repository: ''
+        },
+        {
+            title: 'La paisajista',
+            description: 'La paisajista es una aplicacion web que permite a los usuarios ver los platos disponibles en el menu del restaurante, ademas de poder elegir el plato',
+            image: 'https://media.discordapp.net/attachments/756756648407597070/1016546237480173568/unknown.png?width=917&height=453',
+            url: 'https://paisajistapicanteria.com/',
+            technologies: ['React', 'Nextjs', 'Tailwind', 'Google API', 'Express', 'Prisma', 'Node'],
+            repository: ''
+        },
+        {
+            title: 'Comer al toque App Movil',
+            description: 'Comer al toque es una aplicacion movil que permite a los usuarios encontrar restaurantes cercanos a su ubicacion, ademas de poder ver la carta de los restaurantes y realizar pedidos.',
+            image: 'https://cdn.discordapp.com/attachments/756756648407597070/1016547732023934996/unknown.png',
+            url: 'https://staging.comeraltoque.com/',
+            technologies: ['Kotlin', 'Live Data', 'Google API', 'Materia UI' ],
+            repository: ''
+        },
+        {
+            title: 'Mi portafolio',
+            description: 'Mi portafolio es una aplicacion web que permite a los usuarios ver mis proyectos y contactarme.',
+            image: 'https://media.discordapp.net/attachments/756756648407597070/1016548359110135868/unknown.png?width=917&height=454',
+            url: 'https://raul-dev.netlify.app/',
+            technologies: ['React', 'Redux', 'Tailwind', 'Framer'],
+            repository: ''
+        }
+    ]
 }
 
 const stateEnglish = {

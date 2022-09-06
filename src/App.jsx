@@ -8,6 +8,10 @@ import { useSelector } from 'react-redux'
 import ErrorBoundary from "./components/ErrorBoundary";
 import Contact from "./components/Contact";
 import {motion} from 'framer-motion'
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Hobbies from "./components/Hobbies";
 
 function App() {
   const [index, setIndex] = useState(1);
@@ -75,13 +79,13 @@ function App() {
   const openInfoHandler = () => {
     setOpenInfo(true)
     //disable scroll
-    document.body.style.overflow = 'hidden'
+    //document.body.style.overflow = 'hidden'
   }
 
   const closeInfoHandler = () => {
     setOpenInfo(false)
     //enable scroll
-    document.body.style.overflow = 'auto'
+    //document.body.style.overflow = 'auto'
   }
 
   return (
@@ -106,12 +110,12 @@ function App() {
       
 
       { openInfo && (
-        <div className='fixed flex  z-10 bg-[#001011] w-full h-screen top-0 left-0'>
+        <div className='fixed flex z-10 bg-[#001011] w-full h-screen top-0 left-0 overflow-y-scroll overflow-x-hidden md:overflow-hidden'>
           <div className='w-full h-full flex items-center justify-center'>
 
-            <div className='h-[70%] w-full -mt-10'>
+            <div className='h-full md:h-[70%] w-full md:-mt-10'>
 
-              <motion.div className="max-w-7xl m-auto grid"
+              <motion.div className="w-full md:max-w-7xl m-auto grid"
                 initial={{ y:100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 exit={{ y:100, opacity: 0 }}
@@ -121,16 +125,28 @@ function App() {
                   damping: 20,
                   duration: 20
                 }}>
-                <ul className="bg-[#18191d] rounded-t-md border-b border-dashed border-second-color w-3/5 grid grid-cols-4 justify-self-end gap-10 font-poppins ">
-                  <li className="justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer">About me</li>
-                  <li className="justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer">Experience</li>
-                  <li className="justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer">Skills</li>
-                  <li className="justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer">Hobbies</li>
+                <ul className="bg-[#18191d] rounded-t-md border-b border-dashed border-second-color w-full md:w-3/5 grid grid-cols-4 justify-self-end text-center  gap-2 md:gap-10 font-poppins ">
+                  <li className={`justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer ${pageInfo === 1 ? 'text-red-700': ''}`}
+                    onClick={() => setPageInfo(1)}>
+                    About me
+                  </li>
+                  <li className={`justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer ${pageInfo === 2 ? 'text-red-700': ''}`}
+                    onClick={() => setPageInfo(2)}>
+                    Experience
+                  </li>
+                  <li className={`justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer ${pageInfo === 3 ? 'text-red-700': ''}`}
+                    onClick={() => setPageInfo(3)}>
+                    Skills
+                  </li>
+                  <li className={`justify-self-center p-4 text-slate-400 hover:text-red-700 transition-all duration-300 cursor-pointer ${pageInfo === 4 ? 'text-red-700': ''}`}
+                    onClick={() => setPageInfo(4)}>
+                    Hobbies
+                  </li>
                 </ul>
               </motion.div>
 
-              <div className="flex h-full max-w-7xl m-auto">
-                <motion.div className="w-2/5 bg-[#18191d] flex flex-col text-slate-300 items-center p-4 rounded-l-md"
+              <div className="flex flex-col md:flex-row h-full w-full md:max-w-7xl m-auto">
+                <motion.div className="w-full md:w-2/5 bg-[#18191d] flex flex-col text-slate-300 items-center p-4 rounded-l-md"
                   initial={{ x:-200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   exit={{ x:-200, opacity: 0 }}
@@ -180,7 +196,7 @@ function App() {
                     </div>
 
                 </motion.div>
-                <motion.div className="w-3/5 bg-[#18191d] rounded-br-md border-l border-dashed border-second-color"
+                <motion.div className="w-full md:w-3/5 bg-[#18191d] rounded-br-md p-10 md:p-16 md:border-l border-dashed border-second-color"
                   initial={{ x:200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   exit={{ x:200, opacity: 0 }}
@@ -192,10 +208,10 @@ function App() {
                   }}>
 
                   <AnimatePresence mode="wait" >
-                    {pageInfo === 1 && <div></div> }
-                    {pageInfo === 2 && <div></div> }
-                    {pageInfo=== 3 && <div></div> }
-                    {pageInfo=== 4 && <div></div> }
+                    {pageInfo === 1 && <About /> }
+                    {pageInfo === 2 && <Experience /> }
+                    {pageInfo === 3 && <Skills /> }
+                    {pageInfo === 4 && <Hobbies /> }
                   </AnimatePresence>
 
                 </motion.div>
