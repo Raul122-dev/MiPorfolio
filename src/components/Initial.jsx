@@ -23,7 +23,7 @@ const Initial = ({setOpenInfo}) => {
             {information.name}
           </h1>
           <p className="font-poppins text-slate-400">{information.phrase}</p>
-          <button className="mt-10 border border-main-stroke-color rounded-md py-3 px-4 md:py-4 md:px-5 font-poppins text-sm font-bold text-main-stroke-color transition-all duration-300 ease-in-out active:border-red-700 active:text-red-700 hover:bg-transparent-stroke-color"
+          <button className="mt-10 border border-white rounded-md py-3 px-4 md:py-4 md:px-5 font-poppins text-sm font-bold text-white transition-all duration-300 ease-in-out active:border-red-700 active:text-red-700 hover:bg-transparent-stroke-color"
             onClick={setOpenInfo}>
             {information.buttonMe}
           </button>

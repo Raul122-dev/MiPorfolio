@@ -1,9 +1,27 @@
+import { useSelector } from "react-redux"
+
 const Experience = () => {
+
+    const information = useSelector(state => state.information)
+
     return (
         <div>
             <h1 className="text-red-700 font-poppinsBold text-3xl">Experiencia</h1>
-            <p className="text-slate-400 font-poppins mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorum soluta voluptas autem mollitia inventore explicabo eum quasi atque hic quod, repellat voluptate velit aspernatur rem quas minima, fugit est.</p>
-            <p className="text-slate-400 font-poppins mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorum soluta voluptas autem mollitia inventore explicabo eum quasi atque hic quod, repellat voluptate velit aspernatur rem quas minima, fugit est.</p>
+            {
+                information.experience.map((exp, index) => (
+                    <div className="mt-5" key={index}>
+                        <h3 className="text-second-color font-poppins mt-4 list-disc">{exp.title}</h3>
+                        <div className="flex">
+                            <p className="text-slate-500 text-sm font-poppins mt-2">{exp.company}</p>
+                            -
+                            <p className="text-slate-500 text-sm font-poppins mt-2">{exp.date}</p>
+                        </div>
+                        
+                        <p className="text-slate-400 font-poppins mt-4">{exp.description}</p>
+                    </div>
+                ))
+            }
+
         </div>
     ) 
 }

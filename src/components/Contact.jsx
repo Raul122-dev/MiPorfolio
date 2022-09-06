@@ -18,7 +18,8 @@ const Contact = () => {
             <span className='font-poppinsBold text-second-color'>{information.contactView.span}</span>
             <h1 className="text-5xl my-6 sm:my-14 text-slate-100 md:text-[60px] font-bold leading-5 tracking-normal capitalize font-poppinsBold">{information.contactView.title}</h1>
             <p className="font-poppins text-center text-slate-400 w-[500px]">{information.contactView.subtitle}</p>
-            <button className="mt-10 border border-main-stroke-color rounded-md py-3 px-4 md:py-4 md:px-5 font-poppins text-sm font-bold text-main-stroke-color transition-all duration-300 ease-in-out hover:bg-transparent-stroke-color">{information.contactView.button}</button>
+            <a href={information.contactView.email} target="_blank" className="mt-10 border border-main-stroke-color rounded-md py-3 px-4 md:py-4 md:px-5 font-poppins text-sm font-bold text-main-stroke-color transition-all duration-300 ease-in-out hover:bg-transparent-stroke-color">{information.contactView.button}</a>
+            <a href={`tel:${information.phone}`} className="hover:text-white transition-all ease-in duration-200 mt-2 font-poppins text-sm text-center text-slate-500 w-[500px]">{information.phone}</a>
         </div>
       
     </motion.section>
