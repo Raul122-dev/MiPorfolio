@@ -187,7 +187,7 @@ const initialState = {
             title: 'Comer al toque',
             description: 'Comer al toque es una aplicacion web que permite a los usuarios encontrar restaurantes cercanos a su ubicacion, ademas de poder ver la carta de los restaurantes y realizar pedidos.',
             image: 'https://media.discordapp.net/attachments/806157754896875580/979925907705823252/unknown.png?width=917&height=516',
-            url: 'https://staging.comeraltoque.com/',
+            url: 'https://comeraltoque.com/',
             technologies: ['React', 'Redux', 'Socket.io', 'Google API', 'Django', 'Rest Framework',],
             repository: ''
         },
@@ -203,7 +203,7 @@ const initialState = {
             title: 'Comer al toque App Movil',
             description: 'Comer al toque es una aplicacion movil que permite a los usuarios encontrar restaurantes cercanos a su ubicacion, ademas de poder ver la carta de los restaurantes y realizar pedidos.',
             image: 'https://cdn.discordapp.com/attachments/756756648407597070/1016547732023934996/unknown.png',
-            url: 'https://staging.comeraltoque.com/',
+            url: 'https://comeraltoque.com/',
             technologies: ['Kotlin', 'Live Data', 'Google API', 'Materia UI' ],
             repository: ''
         },
