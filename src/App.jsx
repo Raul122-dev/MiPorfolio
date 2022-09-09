@@ -125,6 +125,7 @@ function App() {
                 initial={{ y:100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 exit={{ y:100, opacity: 0 }}
+                viewport={{ once:true }}
                 transition={{
                   type: "spring",
                   stiffness: 260,
@@ -156,6 +157,7 @@ function App() {
                   initial={{ x:-200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   exit={{ x:-200, opacity: 0 }}
+                  viewport={{ once:true }}
                   transition={{
                     type: "spring",
                     stiffness: 260,
@@ -220,11 +222,12 @@ function App() {
                   initial={{ x:200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   exit={{ x:200, opacity: 0 }}
+                  viewport={{ once:true }}
                   transition={{
                     type: "spring",
                     stiffness: 260,
                     damping: 20,
-                    duration: 20
+                    duration: 20,
                   }}>
 
                   <AnimatePresence mode="wait" >

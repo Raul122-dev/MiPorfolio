@@ -49,7 +49,7 @@ const Initial = ({setOpenInfo}) => {
             {information.name}
             <AnimatePresence>
               <motion.img 
-                className="h-[100px] w-[100px] absolute -top-full" 
+                className=" h-[70px] md:h-[100px] w-[70px] md:w-[100px] absolute -top-[130%] sm:-top-full" 
                 src={technologyUrl} 
                 alt='technologies' 
                 loading="lazy"

@@ -5,7 +5,7 @@ const Experience = () => {
     const information = useSelector(state => state.information)
 
     return (
-        <div className="h-full flex flex-col overflow-y-scroll">
+        <div className="h-full flex flex-col sm:overflow-y-scroll">
             <h1 className="text-red-700 font-poppinsBold text-3xl">Experiencia</h1>
             {
                 information.experience.map((exp, index) => (
