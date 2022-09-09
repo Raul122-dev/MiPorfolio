@@ -6,7 +6,7 @@ const initialState = {
     email: 'victor.huaycho@tecsup.edu.pe',
     phone: '+51 962 990 383',
     phrase: 'Diseñando y Desarrollando experiencias',
-    education: 'Diseño y Desarrollo de Software - Instituto Tecnológico TeCSUP <br> Actualemente soy autodidacta en el desarrollo de aplicaciones web, viendo que es una de las áreas que más me gusta y me motiva.',
+    education: 'Diseño y Desarrollo de Software - Instituto Superior Tecnológico TECSUP. Actualmente soy autodidacta en el aprendizaje del desarrollo de aplicaciones web, viendo que es una de las áreas que más me gusta y me motiva.',
     languagesSpeak: [
         {
             name: 'Español',
@@ -17,24 +17,42 @@ const initialState = {
             level: 'Intermedio'
         }
     ],
-    state: 'Estoy disponible para trabajar en proyectos remotos o en la ciudad de Lima, Perú.',
+    state: 'Estoy disponible para trabajar en proyectos remotos o en la ciudad de Arequipa, Perú.',
     contactUrls: [
         'https://www.linkedin.com/in/victorhuaycho/',
         'https://github.com/Raul122-dev',
         'mailto:victor.huaycho@tecsup.edu.pe'
     ],
-    description: 'Soy un desarrollador web fullstack, me gusta aprender y compartir conocimiento',
-    profile: 'Soy un desarrollador web fullstack, me gusta aprender y compartir conocimiento',
+    description: 'Soy un chico de 19 años, apasionado por la tecnologia y con mucho interes en el mundo del desarrollo web, siendo esta mi principal motivacion para aprender cada dia mas sobre las tecnologias y metologias que se usan en la web, y a su vez poder ser parte de esta.',
+    profile: 'Soy un desarrollador web centrado en el desarrollo Frontend, pero con algunos conocimientos en el desarrollo BackEnd, teniendo como objetivo futuro llegar a ser un desarrollador FullStack y poder trabajar en proyectos de gran envergadura.',
     experience: [
         {
-            title: 'Desarrollador Web - Movil',
+            title: 'Comer al toque - Desarrollador Web - FrontEnd',
             company: 'Innars',
             date: '2021 - Presente',
-            description: 'Desarrollo de aplicaciones web y movile para la empresa Innars, utilizando tecnologías como React, Redux, NodeJS, Express, MongoDB, entre otras.'
+            description: 'Desarrollo de un aplicativo web "Comer al toque", orientado a brindar informacion sobre los restaurantes cercanos a los usuarios, asi como tambien la posibilidad de realizar pedidos de comida a domicilio.'
+        },
+        {
+            title: 'Comer a toque - Desarrollador Mobile',
+            company: 'Innars',
+            date: '2021 - Presente',
+            description: 'Desarrollo de un aplicativo movil "Comer al toque", orientado a brindar informacion sobre los restaurantes cercanos a los usuarios, añadiendo la funcinalida de mostrar una recomendacion en tiempo real de restaurantes cercanos a los usuarios, asi como poder gestinar el acceso de la recomendacion de los restaurantes favoritos de los usuarios.'
+        },
+        {
+            title: 'lA Paisajista Picanteria - Desarrollador FullStack',
+            company: 'Innars',
+            date: '2022 - 2022',
+            description: 'Desarrollo de una Landing Page para un restaurante local muy conocido "La Paisajista Picanteria", con el objetivo de mostrar los servicios que ofrece el restauarante, asi como tambien la posibilidad de ver toda la carta del restaurante.'
+        },
+        {
+            title: 'Walsh Perú - Desarrollador FullStack',
+            company: 'Walsh',
+            date: '2022 - 2022',
+            description: 'Desarrollo de un Sistema de Adquisición de Datos de Campo en Tiempo Real, teniend este la posibilida de gestionar los datos que se ingresen en el sistema, brindo al cliente las funcionalidades de insercion, edicion y eliminacion de los datos.'
         },
     ],
     skills: {
-        description: 'Estas son algunas de las tecnologías que he utilizado en mis proyectos',
+        description: 'Estas son algunas de las tecnologías que he utilizado en mis proyectos.',
         hardSkills: [
             {
                 name: 'HTML',
@@ -121,42 +139,42 @@ const initialState = {
         ]
     },
     hobbies: {
-        description: 'Estos son algunos de mis hobbies',
+        description: 'Pienso que es importante brindar un poco de nuestro tiempo a lo que nos gusta hacer fuera del ambito profesional. Estos son algunos de mis hobbies:',
         hobbiesList:[
             {
                 name: 'Videojuegos',
-                description: 'Me gusta jugar videojuegos, ya que me permite relajarme y divertirme.',
+                description: 'Me gusta jugar videojuegos, es una forma de distraerme y charlar con mis amigos sobre distion temas que nos interesan.',
                 image: 'https://img.freepik.com/vector-gratis/controles-videojuegos-estilo-neon-pared-ladrillo_24908-58916.jpg?w=2000'
             },
             {
                 name: 'Música',
-                description: 'Me gusta escuchar música, ya que me permite relajarme y divertirme.',
+                description: 'Me gusta escuchar música, es algo disfruto y me encanta mucho porque puedo motivarme con la musica que me gusta.',
                 image: 'https://sentidoradio.com/wp-content/uploads/2020/07/historia-de-la-musica-electronica.jpg'
             },
             {
                 name: 'Deportes',
-                description: 'Me gusta practicar deportes, ya que me permite relajarme y divertirme.',
+                description: 'Me gusta practicar algunos deportes como trotar o nadar, y disfruto mucho de estos ya que me ayudan a mantenerme en forma, pero no es algo a lo que le dedique mucho tiempo.',
                 image: 'https://occidente.co/wp-content/uploads/2018/06/trotar-deporte-hombre-trotando-corriendo.jpg'
             },
             {
                 name: 'Leer',
-                description: 'Me gusta leer, ya que me permite relajarme y divertirme.',
+                description: 'Me gusta leer en mis tiempos libres, ya que me permite aprender cosas nuevas y me ayuda a mejorar mi habilidad de enterder ciertos temas',
                 image: 'https://aptus.com.ar/wp-content/uploads/2020/02/Edu-7.jpg'
             },
             {
                 name: 'Ver series',
-                description: 'Me gusta ver series, ya que me permite relajarme y divertirme.',
+                description: 'Me gusta ver series o peliculas es una forma mas de distraerme y relajarme, ya que me permite desconectarme de la rutina diaria.',
                 image: 'https://cdn.vox-cdn.com/thumbor/6tk53aPhe6H8iodxUG-2tWdkjws=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/18327841/acastro_190719_3527_plex_piracy_0002.jpg'
             },
             {
                 name: 'Modelado 3D',
-                description: 'Me gusta modelar en 3D, ya que me permite relajarme y divertirme.',
+                description: 'Me gusta aprender e informarmer sobre el modeldo 3D, ya que es un campo que siempre me ha interesado y es algo que en un futuro quiero desarrollar a profundidad.',
                 image: 'https://i.pinimg.com/originals/48/c6/d6/48c6d69164db2f0620e8754e4aa51acb.jpg'
             },
         ]
     },
     buttonMe : 'Sobre mí',
-    views: ['Inicio', 'Proyectos', 'Contacto', 'Configuracion'],
+    views: ['Inicio', 'Proyectos', 'Contacto', 'Idioma(EN/ES)'],
     contactView: {
         title: 'Contactame',
         subtitle: 'Te gusto el recorrido?, Si quiere comunicarte commigo puede hacerlo enviandome un correo.',

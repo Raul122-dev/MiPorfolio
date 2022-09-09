@@ -3,6 +3,7 @@ import CardProject from "./CardProject";
 import { createRef } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import React from 'react'
 
 const Projects = ({ setIndex }) => {
 
@@ -62,4 +63,4 @@ const Projects = ({ setIndex }) => {
   );
 };
 
-export default Projects;
+export default React.memo(Projects);

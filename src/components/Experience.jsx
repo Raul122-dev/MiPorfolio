@@ -5,7 +5,7 @@ const Experience = () => {
     const information = useSelector(state => state.information)
 
     return (
-        <div>
+        <div className="h-full flex flex-col overflow-y-scroll">
             <h1 className="text-red-700 font-poppinsBold text-3xl">Experiencia</h1>
             {
                 information.experience.map((exp, index) => (
@@ -17,7 +17,7 @@ const Experience = () => {
                             <p className="text-slate-500 text-sm font-poppins mt-2">{exp.date}</p>
                         </div>
                         
-                        <p className="text-slate-400 font-poppins mt-4">{exp.description}</p>
+                        <p className="text-slate-400 text-sm font-poppins leading-6 mt-4">{exp.description}</p>
                     </div>
                 ))
             }

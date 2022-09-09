@@ -13,8 +13,8 @@ const Skills = () => {
                 {
                     information.skills.hardSkills.map((skill, index) => (
                         <div className="flex flex-col items-center px-2 group" key={index}>
-                            <img src={skill.image} alt={skill.name} className="w-14 h-14"  />
-                            <p className="text-white font-poppins mb-2 transition-all duration-200 ease-linear invisible opacity-0 -translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">{skill.name}</p>
+                            <img src={skill.image} alt={skill.name} className="w-14 h-14" loading='lazy' />
+                            <p className="text-white select-none font-poppins mb-2 transition-all duration-200 ease-linear invisible opacity-0 -translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">{skill.name}</p>
                         </div>
                     ))
                 }

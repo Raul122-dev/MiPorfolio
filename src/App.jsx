@@ -105,9 +105,9 @@ function App() {
       {
         !openInfo && (
           <>
-            <AnimatePresence mode="wait" key={index}>
-              {index === 1 && <Initial key="initial" setIndex={setIndex} setOpenInfo={openInfoHandler} />}
-              {index === 2 && <ErrorBoundary><Projects key="second" setIndex={setIndex} /></ErrorBoundary> }
+            <AnimatePresence mode="popLayout" key={index}>
+              {index === 1 && <Initial setOpenInfo={openInfoHandler} />}
+              {index === 2 && <ErrorBoundary><Projects setIndex={setIndex} /></ErrorBoundary> }
               {index === 3 && <Contact />}
             </AnimatePresence>
             <Indicators index={index} setIndex={setIndex} />
@@ -165,7 +165,7 @@ function App() {
                     <span className="p-4 w-10 h-10 font-poppinsBold self-start text-red-400 cursor-pointer"
                       onClick={closeInfoHandler}>X</span>
 
-                    <img src='https://cdn.discordapp.com/attachments/701464055235215471/914324772677095434/Polish_20211127_202002501.png' alt='profile' className='w-40 h-40 rounded-full' />
+                    <img src='https://cdn.discordapp.com/attachments/701464055235215471/914324772677095434/Polish_20211127_202002501.png' alt='perfil-Victor-Raul-Huaycho-Quispe' className='w-40 h-40 rounded-full' />
                     <h3 className="font-poppinsBold text-lg">{information.nameComplete}</h3>
                     <div className="w-full px-5">
                       <h4 className="font-poppinsBold text-xl">Educación</h4>
