@@ -29,7 +29,14 @@ const Indicators = ({ index, setIndex }) => {
   const dispatch = useDispatch()
 
   const handleChangeLanguage = () => {
-    dispatch(changeInfo('en'))
+    const language = localStorage.getItem('language')
+    if (language === 'en') {
+      localStorage.setItem('language', 'es')
+      dispatch(changeInfo('es'))
+    } else {
+      localStorage.setItem('language', 'en')
+      dispatch(changeInfo('en'))
+    }
   }
 
   return (
@@ -53,16 +60,18 @@ const Indicators = ({ index, setIndex }) => {
             </g>
         </svg>
       </Indicator>
-      <Indicator active={index === 4 ? true : false} text={information.views.at(3)} onClick={handleChangeLanguage}>
-        
-        <svg className={`stroke-white group-hover:stroke-[#093A3E] sm:group-hover:-translate-x-1 transition-all duration-200 ease-in `} xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" focusable="false" viewBox="0 0 12 12">
-          <g fill="none" >
-            <circle cx="6" cy="6" r="5.5"/>
-            <path d="M3.5 4.5v3m5-3v3m-7.8-3h10.6M.7 7.5h10.6M6 .5l-2.5 4M6 .5l2.5 4m-2.5 7l-2.5-4m2.5 4l2.5-4"/>
-          </g>
-        </svg>
-
-      </Indicator>
+      <a className={`w-10 h-10 p-2 sm:p-1 relative justify-self-center group grid place-content-center duration-200 ease-linear cursor-pointer select-none`}
+            onClick={handleChangeLanguage}>
+            <svg className={`stroke-white group-hover:stroke-[#093A3E] sm:group-hover:-translate-x-1 transition-all duration-200 ease-in `} xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" focusable="false" viewBox="0 0 12 12">
+              <g fill="none" >
+                <circle cx="6" cy="6" r="5.5"/>
+                <path d="M3.5 4.5v3m5-3v3m-7.8-3h10.6M.7 7.5h10.6M6 .5l-2.5 4M6 .5l2.5 4m-2.5 7l-2.5-4m2.5 4l2.5-4"/>
+              </g>
+            </svg>
+            <div className='h-10 hidden sm:block absolute invisible opacity-0 sm:group-hover:visible sm:group-hover:opacity-100 sm:group-hover:translate-x-11 ease-in-out duration-300 top-0 bg-transparent-stroke-color rounded-sm p-2 font-poppinsBold text-white'>
+                {information.views.at(3)}
+            </div>
+        </a>
     </div>
   );
 };
