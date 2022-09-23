@@ -5,7 +5,7 @@ const stateSpanish = {
     nameComplete: 'Raul Huaycho Quispe',
     email: 'victor.huaycho@tecsup.edu.pe',
     phone: '+51 962 990 383',
-    phrase: 'Diseñando y Desarrollando experiencias',
+    phrase: 'Desarrollando y Diseñando experiencias',
     education: 'Diseño y Desarrollo de Software - Instituto Superior Tecnológico TECSUP. Actualmente soy autodidacta en el aprendizaje del desarrollo de aplicaciones web, viendo que es una de las áreas que más me gusta y me motiva.',
     languagesSpeak: [
         {
