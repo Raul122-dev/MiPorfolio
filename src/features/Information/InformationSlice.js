@@ -189,7 +189,7 @@ const stateSpanish = {
             image: 'https://media.discordapp.net/attachments/806157754896875580/979925907705823252/unknown.png?width=917&height=516',
             url: 'https://comeraltoque.com/',
             technologies: ['React', 'Redux', 'Socket.io', 'Google API', 'Django', 'Rest Framework',],
-            repository: ''
+            repository: 'https://github.com/INNARSSAC/Comeraltoque-react'
         },
         {
             title: 'La paisajista',
@@ -209,11 +209,27 @@ const stateSpanish = {
         },
         {
             title: 'Mi portafolio',
-            description: 'Mi portafolio es una aplicacion web que permite a los usuarios ver mis proyectos y contactarme.',
+            description: 'Mi portafolio es una web estatica que permite ver mis proyectos y contactarme.',
             image: 'https://media.discordapp.net/attachments/756756648407597070/1016548359110135868/unknown.png?width=917&height=454',
             url: 'https://raul-dev.netlify.app/',
             technologies: ['React', 'Redux', 'Tailwind', 'Framer'],
-            repository: ''
+            repository: 'https://github.com/Raul122-dev/MiPorfolio'
+        },
+        {
+            title: 'Ininity Pokemon',
+            description: 'Infinity Pokemon es una aplicacion web que permite ver los pokemones disponibles en la pokedex implementando un scroll infinito, ademas de poder ver la informacion de cada pokemon.',
+            image: 'https://cdn.discordapp.com/attachments/756756648407597070/1022903215412490360/unknown.png',
+            url: 'https://poke-dex-infinity-v8kx.vercel.app/',
+            technologies: ['React', 'ContextApi' , 'NextJS' , 'Tailwind', 'PokeApi'],
+            repository: 'https://github.com/Raul122-dev/PokeDexInfinity'
+        },
+        {
+            title: 'Task App',
+            description: 'Task App es una aplicacion web que permite crear tareas, ademas de poder editarlas y eliminarlas.',
+            image: 'https://cdn.discordapp.com/attachments/756756648407597070/1022905189247746118/unknown.png',
+            url: 'https://tasks-redux.vercel.app/',
+            technologies: ['React', 'Redux', 'Tailwind'],
+            repository: 'https://github.com/Raul122-dev/Tasks-Redux'
         }
     ]
 }
@@ -442,7 +458,7 @@ export const informationSlice = createSlice({
     //initialState,
     reducers: {
         changeInfo: (state, action) => {
-            console.log(state, action)
+            //console.log(state, action)
 
             if(action.payload === 'es'){
                 localStorage.setItem('language', 'es')
@@ -452,28 +468,6 @@ export const informationSlice = createSlice({
                 return stateEnglish
             }
 
-            // if (action.payload === 'en') {
-            //     state.name = stateEnglish.name
-            //     state.email = stateEnglish.email
-            //     state.phone = stateEnglish.phone
-            //     state.phrase = stateEnglish.phrase
-            //     state.description = stateEnglish.description
-            //     state.buttonMe = stateEnglish.buttonMe
-            //     state.views = stateEnglish.views
-            //     state.contactView = stateEnglish.contactView
-                
-            //     //state = stateEnglish
-            // } else if (action.payload === 'es') {
-            //     state.name = initialState.name
-            //     state.email = initialState.email
-            //     state.phone = initialState.phone
-            //     state.phrase = initialState.phrase
-            //     state.description = initialState.description
-            //     state.buttonMe = initialState.buttonMe
-            //     state.views = initialState.views
-            //     state.contactView = initialState.contactView
-                
-            // }
         }
     }
 })
