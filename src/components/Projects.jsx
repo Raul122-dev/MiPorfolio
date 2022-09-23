@@ -45,7 +45,7 @@ const Projects = ({ setIndex }) => {
             <span className="w-full h-[1px] ml-3 bg-white right-0 block top-0 bottom-0 m-auto"/>
           </div>
           
-          <div className="w-full flex gap-12 md:gap-8 flex-col md:px-[80px]">
+          <div className="w-full flex gap-12 md:gap-8 flex-col md:px-[80px] md:pb-20">
 
             {
               information.projects.map((project, index) => (
